@@ -3,6 +3,7 @@
 namespace Hiradrayan\Guide\View\Components;
 
 use Hiradrayan\Guide\Models\Guide;
+use Hiradrayan\Guide\Repositories\GuideRepository;
 use Illuminate\View\Component;
 
 class GuideButton extends Component
@@ -18,7 +19,7 @@ class GuideButton extends Component
     {
         $slug = $this->slug;
 
-        $guide = Guide::where('slug',$slug)->first();
+        $guide = GuideRepository::findBySlug($slug);
 
         return view('guide::components.button', compact('slug','guide'));
     }
