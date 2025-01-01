@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0",
+    "name": "hiradrayan/guide",
+    "description": "A Laravel package for creating responsive, interactive guide sidebars to help users navigate and understand your application",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hiradrayan\\Guide\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hiradrayan\\Guide\\GuideServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Sadegh Rouhani",
+            "email": "sa.rohani72@gmail.com"
+        }
+    ],
+    "require": {}
+}
