@@ -9,6 +9,8 @@ class Guide extends Model
 {
     use HasFactory;
 
+    const TYPE_TOOLTIP = 1;
+    const TYPE_SIDEBAR = 2;
     protected $fillable = [
         'type',
         'slug',

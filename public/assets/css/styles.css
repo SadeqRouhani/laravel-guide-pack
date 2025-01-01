@@ -1,16 +1,19 @@
 .guide-sidebar {
+    top: 0;
     height: 100vh;
-    right: -350px;
-    width: 350px;
+    right: -400px;
+    width: 400px;
     max-width: 100%;
     background-color: white;
     position: fixed;
     z-index: 1090;
-    border-left: 1px solid #ededed;
     transition: right 0.3s ease-in-out;
-    overflow: hidden scroll;
+    overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    direction: rtl;
+    text-align: right;
 
 }
 
@@ -43,4 +46,10 @@ a {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+}
 
+video {
+    max-width: 100%;
+}

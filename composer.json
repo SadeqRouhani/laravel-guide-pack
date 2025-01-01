@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "hiradrayan/guide",
     "description": "A Laravel package for creating responsive, interactive guide sidebars to help users navigate and understand your application",
     "type": "package",
