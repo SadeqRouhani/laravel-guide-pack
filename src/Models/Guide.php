@@ -11,6 +11,10 @@ class Guide extends Model
 
     const TYPE_TOOLTIP = 1;
     const TYPE_SIDEBAR = 2;
+
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
+
     protected $fillable = [
         'type',
         'slug',

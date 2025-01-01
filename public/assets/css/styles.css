@@ -25,7 +25,8 @@
     right: 0;
 }
 .guide-header {
-    background-color: #edeaea;
+    color: white;
+    background-color: #5C8984;
     height: 60px;
     display: flex;
     align-items: center;
