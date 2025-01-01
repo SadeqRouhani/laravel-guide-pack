@@ -1,13 +1,19 @@
+var isSidebarOpen = false;
 function openGuideSidebar(content) {
     document.getElementById('guide-body').innerHTML = content;
 
-    const sidebar = document.querySelector('.guide-sidebar');
+    const sidebar = document.getElementById('guide-sidebar');
     sidebar.classList.add('open');
+
+    setTimeout(function () {
+        isSidebarOpen = true;
+    },300);
 }
 
 function closeGuideSidebar() {
     const sidebar = document.querySelector('.guide-sidebar');
     sidebar.classList.remove('open');
+    isSidebarOpen = false;
 }
 
 function extendElementclickoutside() {
@@ -68,10 +74,14 @@ function extendElementclickoutside() {
 }
 extendElementclickoutside();
 
-const myElement = document.getElementById('guide-sidebar');
+const guideElement = document.getElementById('guide-sidebar');
+guideElement.addEventListener('clickOutside', handleOutsideOfSidebarClick);
 
-function handleOutsideClick(event) {
-    console.log('Clicked outside the element!');
+
+
+function handleOutsideOfSidebarClick(event) {
+    if(isSidebarOpen) {
+        closeGuideSidebar();
+    }
 }
 
-myElement.addEventListener('clickOutside', handleOutsideClick);
